@@ -11,3 +11,15 @@ body{
   color: #fff;
   overflow: hidden;
 }
+
+.css-sl4pg4-control{
+  width: 30% !important;
+}
+.btnNormal{
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
