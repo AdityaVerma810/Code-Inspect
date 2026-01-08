@@ -11,9 +11,15 @@ body{
   color: #fff;
   overflow: hidden;
 }
+.css-b62m3t-container{
+  width: 65%;
+}
 
 .css-sl4pg4-control{
   width: 30% !important;
+}
+.css-1mi3hag-control{
+  width: 100%;
 }
 .btnNormal{
   padding: 10px;

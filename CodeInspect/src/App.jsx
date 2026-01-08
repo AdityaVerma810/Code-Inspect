@@ -7,7 +7,7 @@ import Select from 'react-select';
 
 
 const App = () => {
-   const options = [
+  const options = [
     { value: 'javascript', label: 'JavaScript' },
     { value: 'python', label: 'Python' },
     { value: 'java', label: 'Java' },
@@ -29,8 +29,8 @@ const App = () => {
     { value: 'matlab', label: 'MATLAB' },
     { value: 'bash', label: 'Bash' }
   ];
-   const [selectedOption, setSelectedOption] = useState(options[0]);
-   const customStyles = {
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const customStyles = {
     control: (provided) => ({
       ...provided,
       backgroundColor: '#18181b', // dark background (similar to bg-zinc-900)
@@ -63,7 +63,7 @@ const App = () => {
     }),
     placeholder: (provided) => ({
       ...provided,
-      color: '#a1a1aa',  
+      color: '#a1a1aa',
       width: "100%"
     }),
   };
@@ -74,13 +74,21 @@ const App = () => {
         <div className="left h-[87.5%] w-[50%]">
 
           <div className="tabs !mt-5 !px-5 !mb-3 w-full flex items-center gap-[10px]">
-          <Select
-            value={selectedOption}
-            onChange={(e)=>{setSelectedOption(e)}}
-            options={options}
-            styles={customStyles}
-          />
-          
+            <Select
+              value={selectedOption}
+              onChange={(e) => { setSelectedOption(e) }}
+              options={options}
+              styles={customStyles}
+            />
+            <button className="btnNormal bg-zinc-900 min-w-[120px] transition-all hover:bg-zinc-800">Fix Code</button>
+            <button onClick={() => {
+              if (code === "") {
+                alert("Please enter code first")
+              }
+              else {
+                reviewCode()
+              }
+            }} className="btnNormal bg-zinc-900 min-w-[120px] transition-all hover:bg-zinc-800">Review</button>
           </div>
 
           <Editor height="100%" theme='vs-dark' language="javascript" value="// some comment" />
