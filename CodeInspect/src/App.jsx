@@ -91,7 +91,14 @@ const App = () => {
             }} className="btnNormal bg-zinc-900 min-w-[120px] transition-all hover:bg-zinc-800">Review</button>
           </div>
 
-          <Editor height="100%" theme='vs-dark' language="javascript" value="// some comment" />
+          <Editor height="100%" theme='vs-dark' language={selectedOption.value} value="// Write the code from here" />
+        </div>
+
+         <div className="right overflow-scroll !p-[10px] bg-zinc-900 w-[50%] h-[101%]">
+          <div className="topTab border-b-[1px] border-t-[1px] border-[#27272a] flex items-center justif-between h-[60px]">
+            <p className='font-[700] text-[17px]'>Response</p>
+          </div>
+          
         </div>
       </div>
 
